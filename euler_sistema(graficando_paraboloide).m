@@ -7,19 +7,19 @@ b = 10;
 
 x0 = [1;0.5;0.52721;0.5];
 
-% Desired number of subintervals
+% Numero de intervalos
 
 n = 10000;
 
-% Begin the solution process...
+% Inicializamos con los datos anteriores
 
 h = ( b - a ) / n;
 t = a;
 x = x0;
 
-% T and X are arrays that will contain each t value and each x value
-% computed.  They are not necessary for the final solution, but are used
-% to produce a plot of the solution curve.
+% T y X son arrays que contienen cada valor de t y x calculado.  
+% No son necesarios para conseguir la solucion final, pero son usados
+% para producir el plot de la curva.
 
 T = t;
 X = x;
@@ -28,7 +28,7 @@ V = x(2);
 P = x(3);
 Q = x(4);
 
-% Enter the main loop.
+% Empezamos la iteracion.
 
 for i = 1 : n
 
@@ -50,7 +50,7 @@ for i = 1 : n
 
   t = a + i * h;
 
-  % Now we can save the current values of t and x(t) for plotting.
+  % Guardamos los valores de. t y las funciones para el plotting.
 
   T = [ T, t ];
   X = [ X, x ];
@@ -61,5 +61,19 @@ for i = 1 : n
     
 end;
 
-plot( T, X);
-axis([0 10 0 10])
+axis([0 10 0 10]);
+
+% Graficamos la geodesica
+
+plot3(U,V,(U'.*V')','y-o;Geodésica;');
+
+hold on
+
+% Graficamos el paraboloide
+
+fx=@(u,v) u;
+fy=@(u,v) v;
+fz=@(u,v) v.*u;
+ezsurf(fx,fy,fz,[0 15 0 15]',20);
+
+title('Paraboloide y su Geodésica estimada con Euler'),xlabel('x'),ylabel('y'),zlabel('z'),replot
