@@ -1,0 +1,1 @@
+function ret=g(t,x); ret=x^2; end;
