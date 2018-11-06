@@ -1,1 +1,1 @@
-function ret=g(t,x); ret=x^2; end;
+function ret = g(t,X); ret = [X(3),X(4),X(3)*X(4)*((-2*X(2))/(1+X(2)^2+X(1)^2)),X(3)*X(4)*((-2*X(1))/(1+X(2)^2+X(1)^2))]; end
