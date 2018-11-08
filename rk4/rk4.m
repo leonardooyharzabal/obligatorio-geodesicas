@@ -29,6 +29,8 @@ function [tout, yout] = rk4(FunFcn, tspan, y0, ssize)
 
 % Initialization
 
+time=cputime;
+
 t0=tspan(1);
 tfinal=tspan(2);
 pm = sign(tfinal - t0);  % Which way are we computing?
@@ -73,4 +75,6 @@ while (k < N)
   t = tout(k);
   yout(k,:) = y.';
 end;
+
+printf('Total cpu time: %f seconds\n', cputime-time);
 
