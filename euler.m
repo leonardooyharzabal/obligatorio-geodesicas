@@ -1,6 +1,6 @@
 #!/usr/bin/octave -q
 
-
+time=cputime;
 
 a = 0;
 b = 10;
@@ -41,3 +41,4 @@ end;
 
 plot(T,X);
 axis([0 10 0 10]);
+printf('Tiempo del calculo',cputime-time)
