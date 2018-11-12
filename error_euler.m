@@ -1,7 +1,7 @@
 a = 0;
 b = 10;
 x0 = [1;0.5;0.5;0.5];
-n = 100;
+n = 10000;
 h = ( b - a ) / n;
 t = a;
 x = x0;
@@ -67,5 +67,5 @@ Xt=[Ut' Vt' Pt' Qt']
 
 E=Xs-Xt
 plot(T,E)
-title('Error local del metodo del trapecio con 100 iteraciones.')
+title('Error local del metodo del trapecio con 10000 iteraciones.')
 text(2,-0.012,'Error de u en azul, v en verde, p en celeste y q en rojo.')
