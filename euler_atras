@@ -1,3 +1,4 @@
+time=cputime;
 n=100;
 a=0;
 b=10;
@@ -49,3 +50,4 @@ plot(T,X)
 disp(X)
 axis([0 10 0 10]);
 title("Solucion segun Euler hacia atras");
+printf('Tiempo del calculo',cputime-time)
