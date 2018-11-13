@@ -1,6 +1,6 @@
 time=cputime;
 
-n=100000;
+n=100;
 a=0;
 b=10;
 h = ( b - a ) / n;
