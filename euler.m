@@ -6,7 +6,7 @@ a = 0;
 b = 10;
 
 x0 = [1;0.5;0.5;0.5];
-n = 10000;
+n = 100000;
 h = ( b - a ) / n;
 t = a;
 x = x0;
@@ -39,6 +39,15 @@ for i = 1 : n
     
 end;
 
+printf('Tiempo de cálculo: %f segundos\n', cputime-time);
+
 plot(T,X);
 axis([0 10 0 10]);
-printf('Tiempo del calculo',cputime-time)
+title("Solución según Euler hacia adelante 100000 iteraciones");
+text(9,4.5,'u','Color','blue','FontSize',14);
+text(9,3,'v','Color','red','FontSize',14);
+text(8.7,0.7,'p','Color',[1 0.9 0],'FontSize',14);
+text(9.1,0.7,'q','Color','magenta','FontSize',14);
+
+
+

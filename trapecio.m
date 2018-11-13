@@ -1,6 +1,6 @@
 time=cputime;
 
-n=20;
+n=100000;
 a=0;
 b=10;
 h = ( b - a ) / n;
@@ -46,8 +46,12 @@ z=x
   Q = [ Q, q ];
 endfor
 X=[U' V' P' Q']
-plot(T,X)
-disp(X)
+printf('Tiempo de cálculo: %f segundos\n', cputime-time);
+
+plot(T,X);
 axis([0 10 0 10]);
-title("Solucion segun el metodo del trapecio");
-printf('Tiempo del calculo',cputime-time)
+title("Solución según Método del Trapecio 100000 iteraciones");
+text(9,4.5,'u','Color','blue','FontSize',14);
+text(9,3,'v','Color','red','FontSize',14);
+text(8.7,0.7,'p','Color',[1 0.9 0],'FontSize',14);
+text(9.1,0.7,'q','Color','magenta','FontSize',14);

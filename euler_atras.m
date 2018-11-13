@@ -1,5 +1,5 @@
 time=cputime;
-n=100;
+n=100000;
 a=0;
 b=10;
 h = ( b - a ) / n;
@@ -50,7 +50,7 @@ printf('Tiempo de cálculo: %f segundos\n', cputime-time);
 
 plot(T,X);
 axis([0 10 0 10]);
-title("Solución según Euler hacia atrás 100 iteraciones");
+title("Solución según Euler hacia atrás 100000 iteraciones");
 text(9,4.5,'u','Color','blue','FontSize',14);
 text(9,3,'v','Color','red','FontSize',14);
 text(8.7,0.7,'p','Color',[1 0.9 0],'FontSize',14);
