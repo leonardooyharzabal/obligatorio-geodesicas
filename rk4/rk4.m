@@ -77,5 +77,4 @@ while (k < N)
 end;
 
 printf('Total cpu time: %f seconds\n', cputime-time);
-disp(yout);
 
